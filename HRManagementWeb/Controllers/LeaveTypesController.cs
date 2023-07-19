@@ -9,9 +9,12 @@ using HRManagementWeb.Data;
 using AutoMapper;
 using HRManagementWeb.Models;
 using HRManagementWeb.Contracts;
+using Microsoft.AspNetCore.Authorization;
+using HRManagementWeb.Constants;
 
 namespace HRManagementWeb.Controllers
 {
+    [Authorize(Roles = Roles.Administrator)]
     public class LeaveTypesController : Controller
     {
         private readonly ILeaveTypeRepository leaveTypeRepository;
