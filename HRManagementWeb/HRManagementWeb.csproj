@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-HRManagementWeb-b05e7415-31eb-4fd0-840c-7d53a0ffa9d0</UserSecretsId>
   </PropertyGroup>

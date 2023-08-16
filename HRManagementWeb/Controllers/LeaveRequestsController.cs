@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using HRManagementWeb.Constants;
+using HRManagementWeb.Contracts;
+using HRManagementWeb.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using HRManagementWeb.Data;
-using HRManagementWeb.Models;
-using AutoMapper;
-using HRManagementWeb.Contracts;
-using HRManagementWeb.Respositories;
-using Microsoft.AspNetCore.Authorization;
-using HRManagementWeb.Constants;
 
 namespace HRManagementWeb.Controllers
 {
@@ -60,7 +52,7 @@ namespace HRManagementWeb.Controllers
             {
                 await leaveRequestRepository.ChangeApprovalStatus(id, approved);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;
@@ -76,7 +68,7 @@ namespace HRManagementWeb.Controllers
             {
                 await leaveRequestRepository.CancelLeaveRequest(id);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;
@@ -113,7 +105,7 @@ namespace HRManagementWeb.Controllers
                     ModelState.AddModelError(string.Empty, "You have exceeded your allocation with this request.");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 ModelState.AddModelError(string.Empty, "An Error Has Occurred. Please Try Again Later");
             }

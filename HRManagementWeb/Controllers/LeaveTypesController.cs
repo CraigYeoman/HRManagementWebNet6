@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using HRManagementWeb.Data;
-using AutoMapper;
-using HRManagementWeb.Models;
-using HRManagementWeb.Contracts;
-using Microsoft.AspNetCore.Authorization;
+﻿using AutoMapper;
 using HRManagementWeb.Constants;
+using HRManagementWeb.Contracts;
+using HRManagementWeb.Data;
+using HRManagementWeb.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace HRManagementWeb.Controllers
 {
@@ -35,7 +30,7 @@ namespace HRManagementWeb.Controllers
         {
             var leaveTypes = mapper.Map<List<LeaveTypeVM>>(await leaveTypeRepository.GetAllAsync());
             return View(leaveTypes);
-                          
+
         }
 
         // GET: LeaveTypes/Details/5
@@ -80,7 +75,7 @@ namespace HRManagementWeb.Controllers
             {
                 return NotFound();
             }
-            
+
             var leaveTypeVM = mapper.Map<LeaveTypeVM>(leaveType);
             return View(leaveTypeVM);
         }
@@ -90,7 +85,7 @@ namespace HRManagementWeb.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id,  LeaveTypeVM leaveTypeVM)
+        public async Task<IActionResult> Edit(int id, LeaveTypeVM leaveTypeVM)
         {
             if (id != leaveTypeVM.Id)
             {
@@ -125,8 +120,8 @@ namespace HRManagementWeb.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-           await leaveTypeRepository.DeleteAsync(id);
-           return RedirectToAction(nameof(Index));
+            await leaveTypeRepository.DeleteAsync(id);
+            return RedirectToAction(nameof(Index));
         }
 
         [HttpPost]

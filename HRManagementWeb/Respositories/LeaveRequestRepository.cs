@@ -130,7 +130,7 @@ namespace HRManagementWeb.Respositories
                 .ToListAsync();
         }
 
-        public async Task<LeaveRequestVM?> GetLeaveRequestAsync(int? id)
+        public async Task<LeaveRequestVM> GetLeaveRequestAsync(int? id)
         {
             var leaveRequest = await context.LeaveRequests
                 .Include(q => q.LeaveType)

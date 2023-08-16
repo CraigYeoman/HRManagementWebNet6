@@ -3,8 +3,6 @@ using HRManagementWeb.Constants;
 using HRManagementWeb.Contracts;
 using HRManagementWeb.Data;
 using HRManagementWeb.Models;
-using HRManagementWeb.Respositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -60,19 +58,19 @@ namespace HRManagementWeb.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    
-                    if(await leaveAllocationRepository.UpdateEmployeeAllocation(model))
+
+                    if (await leaveAllocationRepository.UpdateEmployeeAllocation(model))
                     {
                         return RedirectToAction(nameof(ViewAllocations), new { id = model.EmployeeId });
                     }
-                    
+
                 }
-              
+
             }
-            catch(Exception ex)
+            catch (Exception)
             {
                 ModelState.AddModelError(string.Empty, "An Error Has Occurred. Please Try Again Later");
-               
+
             }
             model.Employee = mapper.Map<EmployeeListVM>(await userManager.FindByIdAsync(model.EmployeeId));
             model.LeaveType = mapper.Map<LeaveTypeVM>(await leaveTypeRepository.GetAsync(model.LeaveTypeId));
