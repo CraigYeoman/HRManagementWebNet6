@@ -1,6 +1,6 @@
-﻿using HRManagementWeb.Constants;
-using HRManagementWeb.Contracts;
-using HRManagementWeb.Models;
+﻿using HRManagementCommon.Constants;
+using HRManagementApplicationLogic.Contracts;
+using HRManagementCommon.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -12,11 +12,15 @@ namespace HRManagementWeb.Controllers
     {
         private readonly ILeaveRequestRepository leaveRequestRepository;
         private readonly ILeaveTypeRepository leaveTypeRepository;
+        private readonly ILogger<LeaveRequestsController> logger;
 
-        public LeaveRequestsController(ILeaveRequestRepository leaveRequestRepository, ILeaveTypeRepository leaveTypeRepository)
+        public LeaveRequestsController(ILeaveRequestRepository leaveRequestRepository, 
+            ILeaveTypeRepository leaveTypeRepository,
+            ILogger<LeaveRequestsController> logger)
         {
             this.leaveRequestRepository = leaveRequestRepository;
             this.leaveTypeRepository = leaveTypeRepository;
+            this.logger = logger;
         }
 
         [Authorize(Roles = Roles.Administrator)]
@@ -52,9 +56,9 @@ namespace HRManagementWeb.Controllers
             {
                 await leaveRequestRepository.ChangeApprovalStatus(id, approved);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                logger.LogError(ex, "Error Approving Leave Request");
                 throw;
             }
             return RedirectToAction(nameof(Index));
@@ -68,9 +72,9 @@ namespace HRManagementWeb.Controllers
             {
                 await leaveRequestRepository.CancelLeaveRequest(id);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                logger.LogError(ex, "Error Canceling Leave Request");
                 throw;
             }
             return RedirectToAction(nameof(MyLeave));
@@ -105,8 +109,9 @@ namespace HRManagementWeb.Controllers
                     ModelState.AddModelError(string.Empty, "You have exceeded your allocation with this request.");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                logger.LogError(ex, "Error Creating Leave Request");
                 ModelState.AddModelError(string.Empty, "An Error Has Occurred. Please Try Again Later");
             }
 

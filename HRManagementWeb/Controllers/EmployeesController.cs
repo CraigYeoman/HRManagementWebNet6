@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using HRManagementWeb.Constants;
-using HRManagementWeb.Contracts;
-using HRManagementWeb.Data;
-using HRManagementWeb.Models;
+using HRManagementCommon.Constants;
+using HRManagementApplicationLogic.Contracts;
+using HRManagementData;
+using HRManagementCommon.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
