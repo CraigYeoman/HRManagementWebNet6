@@ -32,7 +32,6 @@ namespace HRManagementWeb.Services
             client.Send(message);
 
             return Task.CompletedTask;
-            
         }
     }
 }

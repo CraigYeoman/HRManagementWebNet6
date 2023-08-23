@@ -3,7 +3,7 @@
     "mssql2": {
       "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/HRManagementWeb20230818105522/providers/Microsoft.ServiceLinker/linkers/ConnectionStringDefaultConnection_6C9758B078",
       "secretStore": "AzureAppSettings",
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/hrmanagementwebdbserver/databases/HRManagementWeb_db",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/hrmanagementwebdbserver/databases/HRManagementWeb_db",
       "type": "mssql.azure",
       "connectionId": "ConnectionString:DefaultConnection"
     }
