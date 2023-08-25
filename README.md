@@ -21,7 +21,7 @@ Development
 - Setup GitHub for Source Control
 - 
 
-[Live Link](hrmanagementweb20230818105522.azurewebsites.net)
+[Live Link](https://hrmanagementweb20230818105522.azurewebsites.net/)
 
 - Login using: Username: admin@localhost.com | Password: P@ssword1
 
