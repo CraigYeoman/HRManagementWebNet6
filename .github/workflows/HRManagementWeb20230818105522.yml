@@ -5,10 +5,10 @@ on:
     - master
 env:
   AZURE_WEBAPP_NAME: HRManagementWeb20230818105522
-  AZURE_WEBAPP_PACKAGE_PATH: HRManangementWeb\published
+  AZURE_WEBAPP_PACKAGE_PATH: HRManagementWeb/published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 6.0.x
-  WORKING_DIRECTORY: HRManangementWeb
+  WORKING_DIRECTORY: HRManagementWeb
 jobs:
   build:
     runs-on: windows-latest
