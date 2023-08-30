@@ -3,5 +3,18 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Running in Azure</h1>
+    <h1 class="display-4">HR Management App</h1>
+    <br/>
+    @if (User.IsInRole(Roles.User))
+    {
+        <h3>Welcome User</h3>
+    }
+    @if (User.IsInRole(Roles.Administrator))
+    {
+        <h3>Welcome Admin</h3>
+    }
+    @if (!User.IsInRole(Roles.Administrator) && !User.IsInRole(Roles.User))
+    {
+        <h3>Please login or register</h3>
+    }
 </div>
