@@ -45,8 +45,16 @@ namespace HRManagementApplicationLogic.Respositories
 
             var user = await userManager.FindByIdAsync(leaveRequest.RequestingEmployeeId);
 
-            await emailSender.SendEmailAsync(user.Email, $"Leave Request Cancelled", $"Your leave request from " +
-                $"{leaveRequest.StartDate} to {leaveRequest.EndDate} has been Cancelled Successfully.");
+            try
+            {
+                await emailSender.SendEmailAsync(user.Email, $"Leave Request Cancelled", $"Your leave request from " +
+               $"{leaveRequest.StartDate} to {leaveRequest.EndDate} has been Cancelled Successfully.");
+            }
+            catch (Exception)
+            {
+                return;
+            }
+           
 
         }
 
@@ -69,8 +77,13 @@ namespace HRManagementApplicationLogic.Respositories
             var user = await userManager.FindByIdAsync(leaveRequest.RequestingEmployeeId);
             var approvalStatus = approved ? "Approved" : "Declined";
 
-            await emailSender.SendEmailAsync(user.Email, $"Leave Request {approvalStatus}", $"Your leave request from " +
+            try
+            {
+                await emailSender.SendEmailAsync(user.Email, $"Leave Request {approvalStatus}", $"Your leave request from " +
                 $"{leaveRequest.StartDate} to {leaveRequest.EndDate} has been {approvalStatus}");
+            }
+            catch
+            { return; }
 
         }
 
@@ -98,8 +111,15 @@ namespace HRManagementApplicationLogic.Respositories
 
             await AddAsync(leaveRequest);
 
-            await emailSender.SendEmailAsync(user.Email, "Leave Request Submitted Successfully", $"Your leave request from " +
-                $"{leaveRequest.StartDate} to {leaveRequest.EndDate} has been submitted for approval");
+            try {
+                await emailSender.SendEmailAsync(user.Email, "Leave Request Submitted Successfully", $"Your leave request from " +
+                    $"{leaveRequest.StartDate} to {leaveRequest.EndDate} has been submitted for approval");
+            }
+            catch ( Exception )
+            {
+                return true;
+            }
+            
 
             return true;
         }

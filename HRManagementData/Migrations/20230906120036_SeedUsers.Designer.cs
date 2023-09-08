@@ -4,6 +4,7 @@ using HRManagementData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HRManagementData.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230906120036_SeedUsers")]
+    partial class SeedUsers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -106,7 +108,7 @@ namespace HRManagementData.Migrations
                         {
                             Id = "408aa945-3d84-4421-8342-7269ec64d949",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "d0e4d9f2-1784-470e-aaa7-871d1ac0673b",
+                            ConcurrencyStamp = "8ab0bfc5-c89f-44ab-929c-9a83900ab871",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateofBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "admin@localhost.com",
@@ -116,9 +118,9 @@ namespace HRManagementData.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@LOCALHOST.COM",
                             NormalizedUserName = "ADMIN@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAECO6AD2rWCmSVlQDpSb1eI3mK6O0KbIq/+ae2BmL57kF6eCPqMQV0ipNxt+TPfnNuQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELrjRHUfWWjaGjM7AToqJIFXq2fK2/M4oAcYcw/h3ExhOpYMkzlV/ESjFKxeAUCjaw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6d0a28cf-5f10-4a2e-9e8b-e3d991cd7807",
+                            SecurityStamp = "b07f96d8-7490-4d34-986c-1f79188ea476",
                             TwoFactorEnabled = false,
                             UserName = "admin@localhost.com"
                         },
@@ -126,7 +128,7 @@ namespace HRManagementData.Migrations
                         {
                             Id = "3f4631bd-f907-4409-b416-ba356312e659",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "6ffa6926-4138-4b5a-87d8-a66dce934076",
+                            ConcurrencyStamp = "e50e52e3-9271-4232-b9e9-294c74382235",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateofBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user1@localhost.com",
@@ -136,9 +138,9 @@ namespace HRManagementData.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USER1@LOCALHOST.COM",
                             NormalizedUserName = "USER1@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEHI+N6qD573ik3V0cjSCehO59FRKvv3GxnAurXdfQG/yNNbsd/dEo0HFoePMrVizuQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEHoZgbM4ZDVnoP5pTOLuG6PXyy+CYL89np1wTP1Pzr88x+8FdjYxvjlLOGFltKLcBA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "4bfcb938-7ef0-4c40-8071-68dc4539db0e",
+                            SecurityStamp = "8fd3779a-04d1-4237-859a-4d100fe07930",
                             TwoFactorEnabled = false,
                             UserName = "user1@localhost.com"
                         },
@@ -146,7 +148,7 @@ namespace HRManagementData.Migrations
                         {
                             Id = "3f4631bd-f907-4410-b416-ba356312e659",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e360c202-260a-4008-8e25-e7939f08eb49",
+                            ConcurrencyStamp = "06443e79-3326-4fe8-8eb8-322d25d6cd59",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateofBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user2@localhost.com",
@@ -156,9 +158,9 @@ namespace HRManagementData.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USER2@LOCALHOST.COM",
                             NormalizedUserName = "USER2@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEAn2smggur4QIjN5EhWUUvyMhSscAqE4KunvizLRPPmbafno6+DrAQ6m/OQaN4MKsA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAECVwGiqyaFGXiNUArcTv8Zwzibc+Yysi2O0CvyVajVXxD2ovEGWIXtfFDyyI4WyrBw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "223bc33a-a6b5-496e-a02a-7db4d2477934",
+                            SecurityStamp = "75326711-4801-485a-8cb8-6d094ef03103",
                             TwoFactorEnabled = false,
                             UserName = "user2@localhost.com"
                         },
@@ -166,7 +168,7 @@ namespace HRManagementData.Migrations
                         {
                             Id = "3f4631bd-f907-4411-b416-ba356312e659",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ef1159de-90c3-4843-ad46-d0a32dd906f4",
+                            ConcurrencyStamp = "93a02d35-c4c6-4607-8333-b58eaeebb8fc",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateofBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user3@localhost.com",
@@ -176,9 +178,9 @@ namespace HRManagementData.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USER3@LOCALHOST.COM",
                             NormalizedUserName = "USER3@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAENHS16n/KX0H4SCRJRVqxL8mTiVTd5kZ2tJWypduoU3Y4zK7owm4IW46xKNnx55T8w==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEE868heAJ5lcPADU93ynPFgd22XfzrDBn0IysEtWZU2oBEgaSRqlrAgX6mCAZvh6fA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "35ce9dbc-95d8-4df7-876d-826909680e41",
+                            SecurityStamp = "f51f2e8a-ea06-423e-bb74-29629884ee59",
                             TwoFactorEnabled = false,
                             UserName = "user3@localhost.com"
                         },
@@ -186,7 +188,7 @@ namespace HRManagementData.Migrations
                         {
                             Id = "3f4631bd-f907-4412-b416-ba356312e659",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "61a3bcba-019c-4e4f-8199-05d955d6ebf0",
+                            ConcurrencyStamp = "03335653-3438-4d63-8549-811fce02de66",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateofBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user4@localhost.com",
@@ -196,9 +198,9 @@ namespace HRManagementData.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USER4@LOCALHOST.COM",
                             NormalizedUserName = "USER4@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAECC3wKfFhxb0kUMvjMqGqvqt/WXs4OYqjbRXEoQ7oEMbFMh8JV/MvsVfrFtUQXA8ww==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBmYBRFos50qlGmEDytkjz2ZNSbPZvKHG2JJHCg/r2YW83LNlhdzsGFXm8GY29LJvA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "0c508cf8-1cda-4af1-804d-48d8b70a357b",
+                            SecurityStamp = "7daffdc8-0e19-44d5-aefb-72c08e0b409d",
                             TwoFactorEnabled = false,
                             UserName = "user4@localhost.com"
                         },
@@ -206,7 +208,7 @@ namespace HRManagementData.Migrations
                         {
                             Id = "3f4631bd-f907-4413-b416-ba356312e659",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "0c22610b-8409-447c-8c6d-a60971f843f9",
+                            ConcurrencyStamp = "dd971a83-6333-46c8-be61-b24527252d63",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateofBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user5@localhost.com",
@@ -216,9 +218,9 @@ namespace HRManagementData.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USER5@LOCALHOST.COM",
                             NormalizedUserName = "USER5@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEC7qO6j1CC3X5KZaKLdlvoRC46qgqcgntXMq1zVGoK44UZolpwG2DG6oNrm5naj8ZA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEHbwmg00almsZvZNjJXZ5/ptx+TYaGJ+xjvfF43JD8ILB2dKnd4RvMnkPC528+8/yQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "9daf2552-13cc-4682-abb3-4ade0607b017",
+                            SecurityStamp = "79a17183-140b-45de-aa82-353dcbe724ea",
                             TwoFactorEnabled = false,
                             UserName = "user5@localhost.com"
                         },
@@ -226,7 +228,7 @@ namespace HRManagementData.Migrations
                         {
                             Id = "3f4631bd-f907-4414-b416-ba356312e659",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "0fa49138-1d85-45d5-b57b-6c6b2a9ad546",
+                            ConcurrencyStamp = "77a9fcb1-060a-4bbf-8b05-3c7759de9dc0",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateofBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user6@localhost.com",
@@ -236,9 +238,9 @@ namespace HRManagementData.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USER6@LOCALHOST.COM",
                             NormalizedUserName = "USER6@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAED0YHJ+k7x+Xzid4J5EASZyfWgcRDViH79dm3zpjFrMK+792HqIagd5eq4SEYMorYg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAED1uXmhpm3lMYGfGsUVMfmtuS+cpiPPGc2a3HSEV/2ZEy5MZ4MVUi+1R7hfIn8Vi2g==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "2b591812-8b95-4104-914c-52f83828f6ff",
+                            SecurityStamp = "1a080d58-2c02-4f09-add2-103791632a04",
                             TwoFactorEnabled = false,
                             UserName = "use6r@localhost.com"
                         },
@@ -246,7 +248,7 @@ namespace HRManagementData.Migrations
                         {
                             Id = "3f4631bd-f907-4415-b416-ba356312e659",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "9873c9cb-1b92-492f-adb1-ef80dd18278f",
+                            ConcurrencyStamp = "e23a9f8b-7529-44e2-bf71-3fcaa3b50b66",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateofBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user7@localhost.com",
@@ -256,9 +258,9 @@ namespace HRManagementData.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USER7@LOCALHOST.COM",
                             NormalizedUserName = "USER7@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDj2qTf9LeOS3I8ATIMrAySsCm5LQmj2VnQUvsqQc+f5BU4ZVKEeEPhyeOkNda3l5Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPS10A7eol7+f3XMX2NJoZPjcmxFV0UW9ZkUdrj1mfOPDiJO85KXRifBiTfmn0lN8A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cc63895b-8e3d-48d8-b5f4-fefdea3ad63e",
+                            SecurityStamp = "34f6b24f-7b4e-4a93-8952-24cd1275e939",
                             TwoFactorEnabled = false,
                             UserName = "user7@localhost.com"
                         },
@@ -266,7 +268,7 @@ namespace HRManagementData.Migrations
                         {
                             Id = "3f4631bd-f907-4416-b416-ba356312e659",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "6d68ad71-585d-4aea-b97c-7734af211e72",
+                            ConcurrencyStamp = "757d46db-6a0e-42d8-9cf7-1155f1108426",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateofBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user8@localhost.com",
@@ -276,9 +278,9 @@ namespace HRManagementData.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USER8@LOCALHOST.COM",
                             NormalizedUserName = "USER8@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDdjg0P13uIj19A1HpEfDKXb6V/yCdd7HJxAkQpq8/Dop2IeDAHx5586SLQFvrTRJA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENCaLm2HcQKMShN10fWZrVR9EF1CjD/r6HveTdsZd25hP9sEjMOqHZKFs9sJ3JBhGw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1d8d38df-144a-4ee5-a4d1-a824ead12628",
+                            SecurityStamp = "94bcf989-6988-4c1d-8cfd-459a80ff09d4",
                             TwoFactorEnabled = false,
                             UserName = "user8@localhost.com"
                         },
@@ -286,7 +288,7 @@ namespace HRManagementData.Migrations
                         {
                             Id = "3f4631bd-f907-4417-b416-ba356312e659",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "58a9c10e-5d0b-416e-9696-0041dee2a14c",
+                            ConcurrencyStamp = "1dab6789-5a90-4a86-b8af-82499ed7e26a",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateofBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user9@localhost.com",
@@ -296,9 +298,9 @@ namespace HRManagementData.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "USER9@LOCALHOST.COM",
                             NormalizedUserName = "USER9@LOCALHOST.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKyEtH9BNcJXgmZvUvnugt3jR3ykce6Ke2p+E4uUcUDRB04LztLEhc4FevRO2cCeTQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEP5nSNJ0al3kIZOLvA+IOAgxyCtxPIYchgtd/Bpd4D/rXieo4cP4rReeBY6m93fOtQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "885b72aa-1b1d-4698-a1dc-1a7bfce5c206",
+                            SecurityStamp = "3ff79d98-5b11-42c9-8316-a94e1e0eb625",
                             TwoFactorEnabled = false,
                             UserName = "user9@localhost.com"
                         });
@@ -380,177 +382,6 @@ namespace HRManagementData.Migrations
                     b.HasIndex("LeaveTypeId");
 
                     b.ToTable("LeaveRequests");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 4,
-                            Cancelled = false,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateRequested = new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EndDate = new DateTime(2023, 10, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LeaveTypeId = 2,
-                            RequestComments = "Vacation",
-                            RequestingEmployeeId = "3f4631bd-f907-4410-b416-ba356312e659",
-                            StartDate = new DateTime(2023, 10, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Cancelled = false,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateRequested = new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EndDate = new DateTime(2023, 10, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LeaveTypeId = 2,
-                            RequestComments = "Vacation",
-                            RequestingEmployeeId = "3f4631bd-f907-4411-b416-ba356312e659",
-                            StartDate = new DateTime(2023, 10, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Cancelled = false,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateRequested = new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EndDate = new DateTime(2023, 11, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LeaveTypeId = 2,
-                            RequestComments = "Vacation",
-                            RequestingEmployeeId = "3f4631bd-f907-4412-b416-ba356312e659",
-                            StartDate = new DateTime(2023, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Cancelled = false,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateRequested = new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EndDate = new DateTime(2023, 11, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LeaveTypeId = 2,
-                            RequestComments = "Vacation",
-                            RequestingEmployeeId = "3f4631bd-f907-4413-b416-ba356312e659",
-                            StartDate = new DateTime(2023, 11, 13, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Cancelled = false,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateRequested = new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EndDate = new DateTime(2023, 11, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LeaveTypeId = 2,
-                            RequestComments = "Vacation",
-                            RequestingEmployeeId = "3f4631bd-f907-4414-b416-ba356312e659",
-                            StartDate = new DateTime(2023, 11, 20, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Cancelled = false,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateRequested = new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EndDate = new DateTime(2023, 12, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LeaveTypeId = 2,
-                            RequestComments = "Vacation",
-                            RequestingEmployeeId = "3f4631bd-f907-4415-b416-ba356312e659",
-                            StartDate = new DateTime(2023, 12, 4, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Cancelled = false,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateRequested = new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EndDate = new DateTime(2023, 9, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LeaveTypeId = 1,
-                            RequestComments = "Sick",
-                            RequestingEmployeeId = "3f4631bd-f907-4416-b416-ba356312e659",
-                            StartDate = new DateTime(2023, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Cancelled = false,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateRequested = new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EndDate = new DateTime(2023, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LeaveTypeId = 1,
-                            RequestComments = "Sick",
-                            RequestingEmployeeId = "3f4631bd-f907-4410-b416-ba356312e659",
-                            StartDate = new DateTime(2023, 8, 24, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 12,
-                            Cancelled = false,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateRequested = new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EndDate = new DateTime(2023, 9, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LeaveTypeId = 2,
-                            RequestComments = "Vacation",
-                            RequestingEmployeeId = "3f4631bd-f907-4416-b416-ba356312e659",
-                            StartDate = new DateTime(2023, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Cancelled = false,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateRequested = new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EndDate = new DateTime(2023, 9, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LeaveTypeId = 2,
-                            RequestComments = "Vacation",
-                            RequestingEmployeeId = "3f4631bd-f907-4417-b416-ba356312e659",
-                            StartDate = new DateTime(2023, 9, 18, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 14,
-                            Cancelled = false,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateRequested = new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EndDate = new DateTime(2023, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LeaveTypeId = 1,
-                            RequestComments = "Sick",
-                            RequestingEmployeeId = "3f4631bd-f907-4412-b416-ba356312e659",
-                            StartDate = new DateTime(2023, 8, 30, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 15,
-                            Cancelled = false,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateRequested = new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EndDate = new DateTime(2023, 8, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LeaveTypeId = 1,
-                            RequestComments = "Sick",
-                            RequestingEmployeeId = "3f4631bd-f907-4413-b416-ba356312e659",
-                            StartDate = new DateTime(2023, 8, 16, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 16,
-                            Cancelled = false,
-                            DateCreated = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateModified = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateRequested = new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EndDate = new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LeaveTypeId = 1,
-                            RequestComments = "Sick",
-                            RequestingEmployeeId = "3f4631bd-f907-4414-b416-ba356312e659",
-                            StartDate = new DateTime(2023, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
                 });
 
             modelBuilder.Entity("HRManagementData.LeaveType", b =>
@@ -608,14 +439,14 @@ namespace HRManagementData.Migrations
                         new
                         {
                             Id = "cac43a6e-f7bb-4448-baaf-1add431ccbbf",
-                            ConcurrencyStamp = "c7ae48af-c271-45ce-8457-69538339db21",
+                            ConcurrencyStamp = "cbd889bf-0e49-42f4-a6c7-5a5322c61dc3",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "cac43a7e-f7cb-4148-baaf-1acb431eabbf",
-                            ConcurrencyStamp = "cd7225f2-75f0-492f-9715-db55e26fb22d",
+                            ConcurrencyStamp = "95fc2031-a9f1-421e-b0d3-5d0ceb93e8a4",
                             Name = "User",
                             NormalizedName = "USER"
                         });

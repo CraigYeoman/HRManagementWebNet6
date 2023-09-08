@@ -102,8 +102,15 @@ namespace HRManagementApplicationLogic.Respositories
 
             foreach (var employee in employeesWithNewAllocations)
             {
-                await emailSender.SendEmailAsync(employee.Email, $"Leave Allocation Posted for {period}", $"Your {leaveType.Name} leave " +
-                    $"has been posted for the period of {period}. You have been given {leaveType.DefaultDays}.");
+                try
+                {
+                    await emailSender.SendEmailAsync(employee.Email, $"Leave Allocation Posted for {period}", $"Your {leaveType.Name} leave " +
+                   $"has been posted for the period of {period}. You have been given {leaveType.DefaultDays}.");
+                }
+                 catch (Exception)
+                {
+                    return;
+                }
             }
 
         }

@@ -18,6 +18,7 @@ namespace HRManagementData
             builder.ApplyConfiguration(new RoleSeedConfiguration());
             builder.ApplyConfiguration(new UserSeedConfiguration());
             builder.ApplyConfiguration(new UserRoleSeedConfiguration());
+            builder.ApplyConfiguration(new LeaveRequestSeedConfiguration());
         }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

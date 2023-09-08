@@ -20,11 +20,13 @@ The main objective was to track employee leave.
 - Implemented Website Layout using bootstrap theme
 
 ### App on Azure
-[Live Link](hrmanagementweb20230818105522.azurewebsites.net)
+[Live Link](https://hrmanagementweb20230818105522.azurewebsites.net)
 
 - Login using: Username: admin@localhost.com | Password: P@ssword1
 
-Registration will not work on deployed app.  If you want to test functionality download locally.
+The live application does not have a SMTP server.
+Due to this reason registration and email functionality will not work.  
+If you want to test the functionality download the application locally.
 
 ### To Configure For Local Use
 Clone Repository To Local Computer
@@ -33,6 +35,3 @@ In HRManagementWeb/appsettings.json edit "DefaultConnection" to point to preferr
 Open Package Console Manager and run the command "Update-Database"
 Download Papercut SMPT
 When completed hit Control+F5 to run application
-
-Future Feature
-- Track employee hours 
