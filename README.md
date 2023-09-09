@@ -35,3 +35,11 @@ In HRManagementWeb/appsettings.json edit "DefaultConnection" to point to preferr
 Open Package Console Manager and run the command "Update-Database"
 Download Papercut SMPT
 When completed hit Control+F5 to run application
+
+### Images
+
+![View](https://github.com/CraigYeoman/HRManagementWebNet6/blob/master/HRManagementWeb/wwwroot/images/github/View.PNG)
+
+![View2](https://github.com/CraigYeoman/HRManagementWebNet6/blob/master/HRManagementWeb/wwwroot/images/github/View2.PNG)
+
+![View3](https://github.com/CraigYeoman/HRManagementWebNet6/blob/master/HRManagementWeb/wwwroot/images/github/View3.PNG)
