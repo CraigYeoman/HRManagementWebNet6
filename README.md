@@ -17,7 +17,6 @@ The main objective was to track employee leave.
 - User Authentication using ASP.NET Core Identity
 - Manage Packages with NuGet Manager
 - Bootstrap to style and manipulate the overall layout
-- Implemented Website Layout using bootstrap theme
 
 ### App on Azure
 [Live Link](https://hrmanagementweb20230818105522.azurewebsites.net)
