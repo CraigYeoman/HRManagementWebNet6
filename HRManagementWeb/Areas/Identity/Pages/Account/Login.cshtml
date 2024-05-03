@@ -52,10 +52,23 @@
                 </div>
             </form>
         </section>
-        <div>
-            <h4>Admin Login using - Username: admin@localhost.com | Password: P@ssword1</h4>
-            <h4>User Login using - Username: user1@localhost.com | Password: P@ssword1</h4>
-        </div>
+        <form id="account" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="Input.Email" type="hidden" value="user1@localhost.com" />
+            <input asp-for="Input.Password" type="hidden" value="P@ssword1" />
+            <div>
+                <button id="login-submit" type="submit" class="w-5 btn btn-lg btn-primary btn-block --bs-blue mb-3">Guest User Log in</button>
+            </div>
+        </form>
+        <form id="account" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="Input.Email" type="hidden" value="admin@localhost.com" />
+            <input asp-for="Input.Password" type="hidden" value="P@ssword1" />
+            <div>
+                <button id="login-submit" type="submit" class="w-5 btn btn-lg btn-primary btn-block --bs-blue">Guest Admin Log in</button>
+            </div>
+        </form>
+        
 
     </div>
 </div>
